@@ -1,11 +1,61 @@
-import React from 'react';
+import { createUserWithEmailAndPassword, getAuth, updateProfile } from 'firebase/auth';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import app from '../../Firebase/firebase.config';
 
+
+const auth = getAuth(app);
 const SignUp = () => {
 
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
 
-    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setSuccess('');
+        setError('');
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        const name = event.target.name.value;
+        const photo = event.target.photoUrl.value;
+
+
+
+        if (password.length < 6) {
+            setError('Please add at least 6 characters in your password')
+            return;
+        }
+
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const loggedUser = result.user;
+
+                setError('');
+                event.target.reset();
+                setSuccess('User has been created successfully');
+                updateUserData(result.user, name, photo);
+            })
+            .catch(error => {
+
+                setError(error.message);
+            })
+    }
+
+    const updateUserData = (user, name, photo) => {
+        updateProfile(user, {
+            displayName: name,
+            photoURL: photo
+        })
+            .then(() => {
+                console.log('user name and photo updated')
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row">
@@ -17,7 +67,7 @@ const SignUp = () => {
                     <div className="card-body">
                         <h1 className="text-3xl text-center font-bold">Sign Up</h1>
                         {/* <form onSubmit={handleSignUp}> */}
-                        <form >
+                        <form onSubmit={handleSubmit}>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Name</span>
@@ -35,7 +85,7 @@ const SignUp = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="text" name='password' placeholder="password" className="input input-bordered" />
-                                
+
                             </div>
                             <div className="form-control">
                                 <label className="label">
