@@ -5,6 +5,41 @@ import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
 
+    const [error, setError] = useState('');
+    
+    const { signIn, signInWithGoogle, user } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    
+    const from = location.state?.from?.pathname || '/'
+
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        
+
+        signIn(email, password)
+            .then(result => {
+                const loggedUser = result.user;
+                event.target.reset();
+                navigate(from, { replace: true })
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then(result => {
+                const loggedUser = result.user;
+                navigate(from, { replace: true })
+            })
+            .catch(error => { })
+    }
+
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
@@ -14,7 +49,7 @@ const Login = () => {
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div className="card-body">
-                        <form action="">
+                        <form action="" onSubmit={handleLogin} >
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -34,9 +69,9 @@ const Login = () => {
                                 <button className="btn btn-primary">Login</button>
                             </div>
                             {
-                    
+                    !user &&
                     <div className='flex justify-center'>
-                        <button className="btn btn-wide  mt-3">Login with Google</button>
+                        <button onClick={handleGoogleSignIn} className="btn btn-wide  mt-3">Login with Google</button>
                     </div>
                 }
                         </form>
