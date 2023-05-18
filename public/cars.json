@@ -1,0 +1,98 @@
+[
+    { 
+      "type": "sports car",
+      "toys": [
+        {
+          "id": 1,
+          "picture": "https://img.freepik.com/free-vector/cartoon-bumper-car-white-background_1308-107382.jpg?w=996&t=st=1684446005~exp=1684446605~hmac=6ab459c310f716004fe6dc622089d5ec5948445452310c9be425132186baae22",
+          "name": "Super Speedster",
+          "price": 49.99,
+          "rating": 4.7,
+          "description": "Experience ultimate speed with this sleek sports car.",
+          "discountPrice": 39.99
+        },
+        {
+          "id": 2,
+          "picture": "https://as1.ftcdn.net/v2/jpg/04/74/18/14/1000_F_474181453_AnHPZiaI3Pu4YiSHCSb4hG9LIaGDQMqB.jpg",
+          "name": "Racing Champion",
+          "price": 39.99,
+          "rating": 4.5,
+          "description": "Become a racing champion with this high-performance sports car.",
+          "discountPrice": 34.99
+        },
+        {
+          "id": 3,
+          "picture": "https://as1.ftcdn.net/v2/jpg/05/23/34/58/1000_F_523345881_o8zctKuDF4jlWuTfGORUe0qzPYS0EzVk.jpg",
+          "name": "Luxury Cruiser",
+          "price": 59.99,
+          "rating": 4.8,
+          "description": "Cruise in style with this luxurious sports car toy.",
+          "discountPrice": 49.99
+        }
+      ]
+    },
+    { 
+      "type": "truck",
+      "toys": [
+        {
+          "id": 4,
+          "picture": "https://as2.ftcdn.net/v2/jpg/00/45/09/57/1000_F_45095752_hje2yKkRcAA0ZmDMK3Yt48GJ1JNHLzUs.jpg",
+          "name": "Monster Truck",
+          "price": 29.99,
+          "rating": 4.4,
+          "description": "Conquer any terrain with this powerful monster truck toy.",
+          "discountPrice": 24.99
+        },
+        {
+          "id": 5,
+          "picture": "https://img.freepik.com/premium-photo/dump-truck-toy-downloading-colorful-blocks-isolated-white_470606-620.jpg?w=996",
+          "name": "Construction Truck",
+          "price": 19.99,
+          "rating": 4.2,
+          "description": "Build and play with this realistic construction truck toy.",
+          "discountPrice": 16.99
+        },
+        {
+          "id": 6,
+          "picture": "https://img.freepik.com/premium-photo/toys-fire-truck-isolated-white-background_41158-16759.jpg?w=996",
+          "name": "Fire Truck",
+          "price": 24.99,
+          "rating": 4.6,
+          "description": "Be a hero and save the day with this fire truck toy.",
+          "discountPrice": 21.99
+        }
+      ]
+    },
+    { 
+      "type": "regular car",
+      "toys": [
+        {
+          "id": 7,
+          "picture": "https://img.freepik.com/premium-photo/child-playing-with-car-close-white-background_427957-279.jpg?w=996",
+          "name": "Family Sedan",
+          "price": 14.99,
+          "rating": 4.0,
+          "description": "A classic family sedan for pretend play adventures.",
+          "discountPrice": 12.99
+        },
+        {
+          "id": 8,
+          "picture": "https://img.freepik.com/premium-photo/transportation-travel-concept_93675-1091.jpg?w=996",
+          "name": "City Car",
+          "price": 17.99,
+          "rating": 4.3,
+          "description": "Navigate the city streets with this compact city car toy.",
+          "discountPrice": 15.99
+        },
+        {
+          "id": 9,
+          "picture": "https://img.freepik.com/premium-photo/happy-child-riding-toy-vintage-car_411285-2316.jpg?w=996",
+          "name": "Convertible Roadster",
+          "price": 24.99,
+          "rating": 4.7,
+          "description": "Enjoy an open-air drive with this stylish convertible roadster.",
+          "discountPrice": 21.99
+        }
+      ]
+    }
+  ]
