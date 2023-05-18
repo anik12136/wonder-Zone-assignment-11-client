@@ -49,10 +49,10 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-            <button className='btn'>Log in</button>
+            <Link to = "/login"><button className='btn' >Log in</button></Link>
         </div>
       </div>
   );
 };
 
-export default Header;
+ export default Header;
