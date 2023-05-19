@@ -1,6 +1,6 @@
 [
     { 
-      "type": "sports car",
+      "title": "sports car",
       "toys": [
         {
           "id": 1,
@@ -32,7 +32,7 @@
       ]
     },
     { 
-      "type": "truck",
+      "title": "truck",
       "toys": [
         {
           "id": 4,
@@ -64,7 +64,7 @@
       ]
     },
     { 
-      "type": "regular car",
+      "title": "regular car",
       "toys": [
         {
           "id": 7,

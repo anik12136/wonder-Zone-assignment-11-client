@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Tab1 = ({car}) => {
-
-    console.log(car)
+const Tab1 = () => {
 
     return (
         <div>
-            <h2>tab 1</h2>
+           <h2>tab1</h2>
         </div>
     );
 };
