@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import Tab1 from './Tab1/Tab1';
-import Tab2 from './Tab2/Tab2';
-import Tab3 from './Tab3/Tab3';
-
 const ReactTabs = () => {
 
     const [toys, setToys] = useState([])
@@ -41,10 +37,10 @@ const ReactTabs = () => {
                     } */}
                 </TabPanel>
                 <TabPanel>
-                    <Tab2></Tab2>
+                    
                 </TabPanel>
                 <TabPanel>
-                    <Tab3></Tab3>
+                    
                 </TabPanel>
             </Tabs>
 
