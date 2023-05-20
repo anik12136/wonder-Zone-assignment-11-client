@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layout/Main";
-import AddAToys from "../Pages/Add-A-Toys/AddAToys";
+import AddToys from "../Pages/AddToys/AddToys";
 import AllToys from "../Pages/All-Toys/AllToys";
 import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home/Home";
@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         },
         {
             path: 'addAToys', 
-            element: <AddAToys></AddAToys>,
+            element: <AddToys></AddToys>,
 
         },
         {
