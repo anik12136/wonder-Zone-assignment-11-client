@@ -1,25 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { AuthContext } from '../../../Provider/AuthProvider';
 const ReactTabs = () => {
 
-    const [toys, setToys] = useState([])
+    const [tabToys, setTabToys] = useState([])
+    const { user } = useContext(AuthContext);
 
   useEffect(() => {
     fetch('https://assignment-11-serve-site-anik12136.vercel.app/carToysTabs')
       .then(res => res.json())
-      .then(data => setToys(data))
+      .then(data => setTabToys(data))
     //   .catch(error => console.error(error))
   }, [])
 
-//   console.log(toys[0]);
-//   console.log(toys[0].toys);
-
-//  const toys1 = toys[0].toys
-
-//  const toys2 = toys[1].toys
-//  const toys3 = toys[2].toys
+const tab1 = tabToys.find(toy => toy.id == 1 );
     return (
         <div>
             <Tabs>
@@ -30,18 +26,33 @@ const ReactTabs = () => {
                 </TabList>
 
                 <TabPanel>
+                    <div>
+                        
+                       
+                           
+                        
+                    </div>
+                </TabPanel>
                     {/* {
-                        toys1.map(toy => <p 
-                        key={toy.id}
-                        >{toy.name}</p>)
-                    } */}
+                        toys.map(toy => <TabSection 
+                        eky ={toy._id}
+                        toy = {toy}
+                        >
+                        </TabSection>
+                     )
+                    }  
                 </TabPanel>
-                <TabPanel>
-                    
-                </TabPanel>
-                <TabPanel>
-                    
-                </TabPanel>
+
+                {/* <div>
+                    {
+                        toys.map(toy => <TabSection 
+                        eky ={toy._id}
+                        toy = {toy}
+                        >
+                        </TabSection>
+                     )
+                    } 
+                </div> */}
             </Tabs>
 
         </div>

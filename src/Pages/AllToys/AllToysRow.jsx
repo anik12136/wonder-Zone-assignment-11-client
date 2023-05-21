@@ -1,6 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AllToysRow = ({ toy }) => {
+
+
     const { description, image, price, quantity, rating, seller_email, seller_name, subCategory, toy_name } = toy;
     // console.log(description, image, price, quantity, rating, seller_email, seller_name, subCategory, toy_name);
     return (
@@ -29,7 +32,9 @@ const AllToysRow = ({ toy }) => {
             </th>
 
             <th>
-                <button  className="btn btn-primary btn-xs ">details</button>
+                
+                <Link to={`/alltoysDetails/${toy._id}`}><button className="btn btn-primary btn-xs ">details</button></Link>
+
             </th>
         </tr>
     );
