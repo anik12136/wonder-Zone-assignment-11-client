@@ -2,6 +2,7 @@ import React from 'react';
 
 const MytoysRow = ({ toy }) => {
 
+
     const { description, image, price, quantity, rating, seller_email, seller_name, subCategory, toy_name } = toy;
 
     return (
@@ -42,6 +43,10 @@ const MytoysRow = ({ toy }) => {
             <Link to={`/alltoysDetails/${toy._id}`}><button className="btn btn-primary btn-xs ">details</button></Link>
 
         </th> */}
+            <div>
+                
+            </div>
+
         </tr>
     );
 };
