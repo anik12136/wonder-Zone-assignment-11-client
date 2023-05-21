@@ -11,7 +11,7 @@ const MyToys = () => {
     // const [searchQuery, setSearchQuery] = useState("All");
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys/${user?.email}`)
+        fetch(`https://assignment-11-serve-site-anik12136.vercel.app/myToys/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyToys(data))
             .catch(error => console.error(error))

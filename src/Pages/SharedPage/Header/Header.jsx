@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 import "./Header.css";
+import "./carLogo.png"
 const Header = () => {
 
   const { user, logOut } = useContext(AuthContext);
@@ -14,7 +15,7 @@ const Header = () => {
   }
 
   return (
-    <div className="navbar bg-base-100 px-20 py-5 bg-slate-400">
+    <div className="navbar bg-base-100 px-20 py-5 bg-pink-200		">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -38,7 +39,10 @@ const Header = () => {
             <li><Link to="/blogs">Blogs</Link></li>
           </ul>
         </div>
+
+        {/* <div><img src="https://ibb.co/7bk97JR" alt="" /></div> */}
         <a className="btn btn-ghost normal-case text-xl">WonderZone</a>
+        
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -71,12 +75,12 @@ const Header = () => {
         }
         {
           user &&
-          <Link to="/login"><button onClick={handleLogOut} className='btn' >Log out</button></Link>
+          <Link to="/login"><button onClick={handleLogOut} className='btn bg-lime-200		text-black' >Log out</button></Link>
         }
 
         {
           !user &&
-          <Link to="/login"><button className='btn' >Log in</button></Link>
+          <Link to="/login"><button className='btn bg-lime-200 text-black' >Log in</button></Link>
         }
 
       </div>
