@@ -1,4 +1,3 @@
-import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
 const AlltoysDetails = () => {

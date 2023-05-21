@@ -55,7 +55,6 @@ const AllToys = () => {
 
                                 key={toy._id}
                                 toy={toy}
-                            // handleDelete={handleDelete}
 
                             ></AllToysRow>)
                         }

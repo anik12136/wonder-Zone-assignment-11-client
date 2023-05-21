@@ -18,16 +18,16 @@ const MytoysRow = ({ toy }) => {
                 </div>
             </td>
             <th>
-                <div>{subCategory}</div>
+                {subCategory}
             </th>
             <th>
-                <div>{toy_name}</div>
+                {toy_name}           
+             </th>
+            <th>
+                {price}
             </th>
             <th>
-                <div>{price}</div>
-            </th>
-            <th>
-                <div>{quantity}</div>
+                {quantity}
             </th>
             <th>
                 <button className="btn btn-success">Update</button>
@@ -43,9 +43,7 @@ const MytoysRow = ({ toy }) => {
             <Link to={`/alltoysDetails/${toy._id}`}><button className="btn btn-primary btn-xs ">details</button></Link>
 
         </th> */}
-            <div>
-                
-            </div>
+           
 
         </tr>
     );

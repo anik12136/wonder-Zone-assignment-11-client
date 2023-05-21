@@ -26,12 +26,7 @@ const tab1 = tabToys.find(toy => toy.id == 1 );
                 </TabList>
 
                 <TabPanel>
-                    <div>
-                        
-                       
-                           
-                        
-                    </div>
+                    
                 </TabPanel>
                     {/* {
                         toys.map(toy => <TabSection 

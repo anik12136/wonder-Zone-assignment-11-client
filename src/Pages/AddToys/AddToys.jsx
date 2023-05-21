@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from 'react';
 import { useForm } from "react-hook-form";
 import { AuthContext } from '../../Provider/AuthProvider';
 
@@ -22,9 +22,9 @@ const AddToys = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            // if(data.insertedId){
-            //     alert('service book successfully')
-            // }
+            if(data.insertedId){
+                alert('Added successfully')
+            }
         })      
     };
     // console.log(addedToy)
