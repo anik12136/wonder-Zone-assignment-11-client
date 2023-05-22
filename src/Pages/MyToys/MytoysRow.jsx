@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const MytoysRow = ({ toy }) => {
 
@@ -21,8 +22,8 @@ const MytoysRow = ({ toy }) => {
                 {subCategory}
             </th>
             <th>
-                {toy_name}           
-             </th>
+                {toy_name}
+            </th>
             <th>
                 {price}
             </th>
@@ -30,7 +31,8 @@ const MytoysRow = ({ toy }) => {
                 {quantity}
             </th>
             <th>
-                <button className="btn btn-success">Update</button>
+                <Link
+                    to={`/mytoysDetails/${toy._id}`}> <button className="btn btn-success">Update</button></Link>
             </th>
             <th>
 
@@ -43,7 +45,7 @@ const MytoysRow = ({ toy }) => {
             <Link to={`/alltoysDetails/${toy._id}`}><button className="btn btn-primary btn-xs ">details</button></Link>
 
         </th> */}
-           
+
 
         </tr>
     );

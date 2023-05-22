@@ -8,6 +8,7 @@ import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home/Home";
 import Login from "../Pages/Login/Login";
 import MyToys from "../Pages/MyToys/MyToys";
+import UpdateToys from "../Pages/MyToys/UpdateToys";
 import SignUp from "../Pages/Registration/SignUp";
 import PrivateRoute from "./PrivateRoute";
 
@@ -49,6 +50,11 @@ const router = createBrowserRouter([
             {
                 path: '/alltoysDetails/:id',
                 element: <AlltoysDetails></AlltoysDetails>,
+                loader: ({ params }) => fetch(`https://assignment-11-serve-site-anik12136.vercel.app/toyDetail/${params.id}`)
+            },
+            {
+                path: '/myToysDetails/:id',
+                element:<UpdateToys></UpdateToys>,
                 loader: ({ params }) => fetch(`https://assignment-11-serve-site-anik12136.vercel.app/toyDetail/${params.id}`)
             },
 
