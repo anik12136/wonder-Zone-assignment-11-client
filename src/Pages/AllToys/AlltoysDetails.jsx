@@ -20,7 +20,13 @@ const AlltoysDetails = () => {
                             <div className='flex gap-10 mb-5'>
                                 <p>Price:{ToyDetails.price}</p>
                                 <p>Quantity:{ToyDetails.quantity}</p>
-                                <p>{ToyDetails.rating}</p>
+                                <div className="rating rating-sm">
+                                    <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" checked />
+                                    <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
+                                    <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
+                                </div>
                             </div>
                             <div className='flex gap-2'>
                                 <h2>Seller :</h2>

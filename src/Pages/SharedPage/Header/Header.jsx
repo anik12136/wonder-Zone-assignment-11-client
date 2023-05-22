@@ -17,7 +17,9 @@ const Header = () => {
   return (
 
     <div>
-      <div className="navbar bg-base-100 px-20 py-5 bg-pink-200		">
+      {/* <div className="navbar bg-base-100 px-20 py-5 bg-pink-300"> */}
+      {/* <div className="navbar bg-gradient-to-r from-green-400 to-blue-500 hover:from-pink-500 hover:to-yellow-500"> */}
+      <div className="navbar bg-gradient-to-r from-pink-300 to-yellow-500 px-20">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -39,11 +41,11 @@ const Header = () => {
             <img className='h-16' src="https://i.ibb.co/WxXPC5t/pngtree-wash-car-logo-design-png-image-8384730.png" alt="" />
 
           </div>
-          <a className="text-white		 normal-case text-xl">WonderZone</a>
+          <a className="text-white	 ms-2 normal-case text-4xl">WonderZone</a>
 
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 text-white">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/allToys">All Toys</Link></li>
             <li><Link to="/myToys">My Toys</Link></li>

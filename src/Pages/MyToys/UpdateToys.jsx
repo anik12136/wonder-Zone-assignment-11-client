@@ -1,4 +1,3 @@
-import React, {useState } from 'react';
 import { useForm } from "react-hook-form";
 import { useLoaderData } from 'react-router-dom';
 
@@ -6,13 +5,14 @@ const UpdateToys = () => {
 
     const ToyDetails = useLoaderData();
 
-    const  [updateData,setUpdateData]= useState(null)
+    // const  [updateData,setUpdateData]= useState(null)
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     
 
     const handleUpdateToy = (data) => {
-        fetch(`http://localhost:5000/updateToy/${data?._id}`,{
+        // fetch(`http://localhost:5000/updateToy/${data?._id}`,{
+        fetch(`https://assignment-11-serve-site.vercel.app/updateToy/${data?._id}`,{
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -22,7 +22,6 @@ const UpdateToys = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.modifiedCount > 0) {
-
 
                     alert('Added successfully')
                 }
