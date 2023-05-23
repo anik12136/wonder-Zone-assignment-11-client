@@ -1,53 +1,76 @@
+
 import React, { useContext, useEffect, useState } from 'react';
 
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import { AuthContext } from '../../../Provider/AuthProvider';
+import TabDetails from './TabDetails';
 const ReactTabs = () => {
 
-    const [tabToys, setTabToys] = useState([])
+
     const { user } = useContext(AuthContext);
 
-  useEffect(() => {
-    fetch('https://assignment-11-serve-site-anik12136.vercel.app/carToysTabs')
-      .then(res => res.json())
-      .then(data => setTabToys(data))
-    //   .catch(error => console.error(error))
-  }, [])
+    const [tabToys, setTabToys] = useState([])
+    const [id, setId] = useState()
 
-const tab1 = tabToys.find(toy => toy.id == 1 );
+    const url = `http://localhost:5000/carToysTabs/${id}`
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => setTabToys(data))
+    }, [url]);
+
+
+    const handleTab = ID => {
+        setId(ID)
+    }
+
+
+
+    // console.log(tabToys)
+    // console.log(tabToys)
+
+
+    console.log()
+
+
     return (
-        <div>
+        <div className='ms-40 mt-20'>
+            <h2 className='my-5 text-2xl'>Shop by category</h2>
             <Tabs>
-                <TabList className="">
-                    <Tab>Tab 1</Tab>
-                    <Tab>Tab 2</Tab>
-                    <Tab>Tab 3</Tab>
+                <TabList className=" ">
+                    <Tab onClick={() => handleTab(1)}>sports car</Tab>
+                    <Tab onClick={() => handleTab(2)}>truck</Tab>
+                    <Tab onClick={() => handleTab(3)}>regular car</Tab>
+
                 </TabList>
 
                 <TabPanel>
-                    
-                </TabPanel>
-                    {/* {
-                        toys.map(toy => <TabSection 
-                        eky ={toy._id}
-                        toy = {toy}
-                        >
-                        </TabSection>
-                     )
-                    }  
-                </TabPanel>
-
-                {/* <div>
                     {
-                        toys.map(toy => <TabSection 
-                        eky ={toy._id}
-                        toy = {toy}
-                        >
-                        </TabSection>
-                     )
-                    } 
-                </div> */}
+                        tabToys.map(tab => <TabDetails
+                            key={tab.id}
+                            tab={tab}
+                        ></TabDetails>)
+                    }
+
+                </TabPanel>
+                <TabPanel>
+                    {
+                        tabToys.map(tab => <TabDetails
+                            key={tab.id}
+                            tab={tab}
+                        ></TabDetails>)
+                    }
+
+                </TabPanel>
+                <TabPanel>
+                    {
+                        tabToys.map(tab => <TabDetails
+                            key={tab.id}
+                            tab={tab}
+                        ></TabDetails>)
+                    }
+                </TabPanel>
             </Tabs>
 
         </div>

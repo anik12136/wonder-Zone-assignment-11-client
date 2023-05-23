@@ -6,6 +6,7 @@ import AllToys from "../Pages/AllToys/AllToys";
 import AlltoysDetails from "../Pages/AllToys/AlltoysDetails";
 import Blogs from "../Pages/Blogs/Blogs";
 import Home from "../Pages/Home/Home/Home";
+import TabDetailsCard from "../Pages/Home/ReactTabs/TabDetailsCard/TabDetailsCard";
 import Login from "../Pages/Login/Login";
 import MyToys from "../Pages/MyToys/MyToys";
 import UpdateToys from "../Pages/MyToys/UpdateToys";
@@ -21,6 +22,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
+
             },
             {
                 path: 'login',
@@ -54,16 +56,23 @@ const router = createBrowserRouter([
             },
             {
                 path: '/myToysDetails/:id',
-                element:<UpdateToys></UpdateToys>,
-                loader: ({ params }) => fetch(`https://assignment-11-serve-site-anik12136.vercel.app/toyDetail/${params.id}`)
+                element: <UpdateToys></UpdateToys>,
+                loader: ({ params }) => fetch(`https://assignment-11-serve-site-anik12136.vercel.app/toyDetail/${params.id}`),
+
             },
+
+            {
+                path: '/carToyDetails',
+                element: <PrivateRoute><TabDetailsCard></TabDetailsCard></PrivateRoute>
+            },
+
 
         ]
     },
     {
-        path : '*',
-        element : <NotFound></NotFound>
-      },
+        path: '*',
+        element: <NotFound></NotFound>
+    },
 ]);
 
 export default router;
