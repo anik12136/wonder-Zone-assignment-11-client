@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './TopBanner.css';
 const TopBanner = () => {
     return (
@@ -10,7 +11,7 @@ const TopBanner = () => {
                         <h2 className='text-6xl font-bold'>Play Sing And Joy With <span className='text-orange-400'>WonderZone's</span> Car Toy</h2>
                         <p>At our Cars Toy Website, we offer a wide range of high-quality and authentic Cars toys for sale. Whether you're a parent looking for the perfect gift for your little one or a collector seeking to expand your collection, we have a diverse selection of Cars toys to fulfill your needs.</p>
                         <div>
-                            <button className="btn btn-outline btn-secondary">Explore</button>
+                        <Link to='/allToys'><button className="btn btn-outline btn-secondary">Explore</button></Link>
                         </div>
                     </div>
                 </div>
