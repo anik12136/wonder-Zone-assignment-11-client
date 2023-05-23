@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import Discount from '../DiscountSection/Discount';
 import Gallery from '../Gallery/Gallery';
 import Rtab from '../ReactTabs/Rtab';
 import TopBanner from '../TopBanner.jsx/TopBanner';
@@ -13,6 +14,7 @@ const Home = () => {
             <Gallery></Gallery>
             {/* <ReactTabs></ReactTabs> */}
             {/* <TabSection></TabSection> */}
+            <Discount></Discount>
             <Banner></Banner>
             <Rtab></Rtab>
         </div>

@@ -2,12 +2,12 @@ import React from 'react';
 
 const Gallery = () => {
     return (
-        <div className='m-20'>
+        <div className='mx-40'>
 
             <div className=''>
                 <h1 className=' py-3 text-center text-yellow-500 text-4xl drop-shadow-2xl bg-slate-100 font-bold'>Toy Gellary</h1>
             </div>
-            <div className="grid grid-cols-3 gap-4 m-20">
+            <div className="grid grid-cols-3 gap-4 mt-5">
 
                 <div className="relative group ">
                     <div className="overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105">

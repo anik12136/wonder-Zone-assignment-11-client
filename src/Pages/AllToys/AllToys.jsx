@@ -4,7 +4,7 @@ import AllToysRow from './AllToysRow';
 const AllToys = () => {
 
     const [allToys, setAllToys] = useState([])
-    const [searchQuery, setSearchQuery] = useState('all');
+    const [searchQuery, setSearchQuery] = useState("all");
 
     useEffect(() => {
         // fetch(`http://localhost:5000/allToys/${searchQuery}`)
@@ -55,7 +55,6 @@ const AllToys = () => {
 
                                 key={toy._id}
                                 toy={toy}
-
                             ></AllToysRow>)
                         }
 

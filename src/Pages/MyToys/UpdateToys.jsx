@@ -31,7 +31,7 @@ const UpdateToys = () => {
                         showConfirmButton: false,
                         timer: 1500
                       })
-                      
+
                 }
             }
             )
@@ -57,14 +57,14 @@ return (
                     <span className="label-text">Price</span>
                 </label>
 
-                <input {...register("price", { required: true })} defaultValue={ToyDetails?.price} type="text" className="input input-bordered" />
+                <input {...register("price", )} defaultValue={ToyDetails?.price} type="number" className="input input-bordered" />
 
             </div>
             <div className="form-control">
                 <label className="label">
                     <span className="label-text">Available Quantity</span>
                 </label>
-                <input defaultValue={ToyDetails?.quantity} type="text" {...register("quantity", { required: true })} placeholder="email" className="input input-bordered" />
+                <input defaultValue={ToyDetails?.quantity} type="number" {...register("quantity", { required: true })}  className="input input-bordered" />
 
             </div>
 
