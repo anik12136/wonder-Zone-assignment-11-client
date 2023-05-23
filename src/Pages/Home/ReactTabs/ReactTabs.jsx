@@ -13,7 +13,7 @@ const ReactTabs = () => {
     const [tabToys, setTabToys] = useState([])
     const [id, setId] = useState()
 
-    const url = `http://localhost:5000/carToysTabs/${id}`
+    const url = `https://assignment-11-serve-site-anik12136.vercel.app/carToysTabs/${id}`
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
