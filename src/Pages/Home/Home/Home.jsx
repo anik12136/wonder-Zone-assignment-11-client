@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             <TopBanner></TopBanner>
-            <Animation></Animation>
+            {/* <Animation></Animation> */}
             <Gallery></Gallery>
             {/* <ReactTabs></ReactTabs> */}
             {/* <TabSection></TabSection> */}

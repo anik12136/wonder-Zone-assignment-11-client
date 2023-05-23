@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './TopBanner.css';
 const TopBanner = () => {
     return (
-        <div className="carousel w-full h-[600px]">
+        <div className="carousel w-full h-[600px] mb-10">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src="https://cdn.pixabay.com/animation/2022/10/02/16/27/16-27-54-483_512.gif" className="w-full grid justify-items-end bannerImg" />
                 <div className="absolute  flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0)]">
