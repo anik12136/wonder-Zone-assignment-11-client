@@ -1,5 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useLoaderData } from 'react-router-dom';
+import Swal from "sweetalert2";
 
 const UpdateToys = () => {
 
@@ -23,7 +24,14 @@ const UpdateToys = () => {
             .then(data => {
                 if (data.modifiedCount > 0) {
 
-                    alert('Added successfully')
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Your work has been saved',
+                        showConfirmButton: false,
+                        timer: 1500
+                      })
+                      
                 }
             }
             )

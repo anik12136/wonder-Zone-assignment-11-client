@@ -1,13 +1,19 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MytoysRow = ({ toy }) => {
+const MytoysRow = ({ toy,handleDeletConfirm,deleteHandeler}) => {
 
 
-    const { description, image, price, quantity, rating, seller_email, seller_name, subCategory, toy_name } = toy;
+    const { description, image, price, quantity, rating, seller_email, seller_name, subCategory, toy_name,_id } = toy;
+
+
 
     return (
         <tr>
+            <th>
+                <button onClick={() => deleteHandeler(_id)} className="btn btn-sm btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                </button>
+            </th>
             <td>
                 <div className="flex items-center space-x-3">
 
@@ -31,12 +37,7 @@ const MytoysRow = ({ toy }) => {
                 {quantity}
             </th>
             <th>
-                <Link
-                    to={`/mytoysDetails/${toy._id}`}> <button className="btn btn-success">Update</button></Link>
-            </th>
-            <th>
-
-                <button className="btn btn-warning">Delete</button>
+                <Link to={`/mytoysDetails/${toy._id}`}> <button className="btn btn-success">Update</button></Link>
             </th>
 
 

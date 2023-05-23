@@ -30,7 +30,7 @@ const AddToys = () => {
     // console.log(addedToy)
 
     return (
-        <form className='mx-40' onSubmit={handleSubmit(onSubmit)}>
+        <form className='mx-40 mb-20' onSubmit={handleSubmit(onSubmit)}>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 mb-10 ">
                 <div className="form-control">
@@ -76,21 +76,21 @@ const AddToys = () => {
                     <label className="label">
                         <span className="label-text">Price</span>
                     </label>
-                    <input type="text" {...register("price", { required: true })} className="input input-bordered" />
+                    <input type="number" {...register("price", { required: true })} className="input input-bordered" />
                     {errors.price && <span className='text-rose-400'>This field is required</span>}
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Rating</span>
                     </label>
-                    <input type="text" {...register("rating", { required: true })} className="input input-bordered" />
+                    <input type="number" {...register("rating", { required: true })} className="input input-bordered" />
                     {errors.rating && <span className='text-rose-400'>This field is required</span>}
                 </div>
                 <div className="form-control">
                     <label className="label">
                         <span className="label-text">Available quantity</span>
                     </label>
-                    <input type="text" {...register("quantity", { required: true })} className="input input-bordered" />
+                    <input type="number" {...register("quantity", { required: true })} className="input input-bordered" />
                     {errors.quantity && <span className='text-rose-400'>This field is required</span>}
                 </div>
                 <div className="form-control">
